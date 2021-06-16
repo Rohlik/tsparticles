@@ -1,0 +1,307 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Core/Interfaces/IPlugin | tsParticles - v1.28.2</title>
+	<meta name="description" content="Documentation for tsParticles - v1.28.2">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">tsParticles - v1.28.2</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">tsParticles - v1.28.2</a>
+				</li>
+				<li>
+					<a href="core_interfaces_iplugin.html">Core/Interfaces/IPlugin</a>
+				</li>
+			</ul>
+			<h1>Module Core/Interfaces/IPlugin</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<a href="#pluginscustomizations" id="pluginscustomizations" style="color: inherit; text-decoration: none;">
+							<h1>Plugins/Customizations</h1>
+						</a>
+						<p>tsParticles now supports some customizations 🥳.</p>
+						<p><strong>NOW YOU CAN CREATE YOUR OWN SHAPES OR PRESETS</strong></p>
+						<a href="#creating-a-custom-shape" id="creating-a-custom-shape" style="color: inherit; text-decoration: none;">
+							<h2>Creating a custom shape</h2>
+						</a>
+						<p>You can now create a script with your own shape to use in your website or for distributing it to others. All you have to do is a drawing function, give it a name and use it in the config.</p>
+						<p>Publish your shapes with <code>tsparticles-shape</code> tag on <code>NPM</code> so everyone can find it.</p>
+						<p>You&#39;ll find a sample below.</p>
+						<a href="#spiral-sample" id="spiral-sample" style="color: inherit; text-decoration: none;">
+							<h3>Spiral sample</h3>
+						</a>
+						<p><em>spiral.js</em> - The custom shape script, you can distribute it or reuse in all your websites.</p>
+						<pre><code class="language-javascript"><span style="color: #008000">// call this method before initializing tsParticles, this shape will be available in all of your tsParticles instances</span>
+<span style="color: #008000">// parameters: shape name, drawing method</span>
+<span style="color: #008000">// opacity is just for shapes that needs a differenc opacity handling like images</span>
+<span style="color: #001080">tsParticles</span><span style="color: #000000">.</span><span style="color: #795E26">addShape</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;spiral&quot;</span><span style="color: #000000">, </span><span style="color: #0000FF">function</span><span style="color: #000000"> (</span><span style="color: #001080">context</span><span style="color: #000000">, </span><span style="color: #001080">particle</span><span style="color: #000000">, </span><span style="color: #001080">radius</span><span style="color: #000000">, </span><span style="color: #001080">opacity</span><span style="color: #000000">) {</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">shapeData</span><span style="color: #000000"> = </span><span style="color: #001080">particle</span><span style="color: #000000">.</span><span style="color: #001080">shapeData</span><span style="color: #000000">;</span>
+<span style="color: #000000">  </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">realWidth</span><span style="color: #000000"> = (</span><span style="color: #001080">radius</span><span style="color: #000000"> - </span><span style="color: #001080">shapeData</span><span style="color: #000000">.</span><span style="color: #001080">innerRadius</span><span style="color: #000000">) / </span><span style="color: #001080">shapeData</span><span style="color: #000000">.</span><span style="color: #001080">lineSpacing</span><span style="color: #000000">;</span>
+
+<span style="color: #000000">  </span><span style="color: #AF00DB">for</span><span style="color: #000000"> (</span><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">i</span><span style="color: #000000"> = </span><span style="color: #098658">0</span><span style="color: #000000">; </span><span style="color: #001080">i</span><span style="color: #000000"> &lt; </span><span style="color: #001080">realWidth</span><span style="color: #000000"> * </span><span style="color: #098658">10</span><span style="color: #000000">; </span><span style="color: #001080">i</span><span style="color: #000000">++) {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">angle</span><span style="color: #000000"> = </span><span style="color: #098658">0.1</span><span style="color: #000000"> * </span><span style="color: #001080">i</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">x</span><span style="color: #000000"> =</span>
+<span style="color: #000000">      (</span><span style="color: #001080">shapeData</span><span style="color: #000000">.</span><span style="color: #001080">innerRadius</span><span style="color: #000000"> + </span><span style="color: #001080">shapeData</span><span style="color: #000000">.</span><span style="color: #001080">lineSpacing</span><span style="color: #000000"> * </span><span style="color: #001080">angle</span><span style="color: #000000">) * </span><span style="color: #267F99">Math</span><span style="color: #000000">.</span><span style="color: #795E26">cos</span><span style="color: #000000">(</span><span style="color: #001080">angle</span><span style="color: #000000">);</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">y</span><span style="color: #000000"> =</span>
+<span style="color: #000000">      (</span><span style="color: #001080">shapeData</span><span style="color: #000000">.</span><span style="color: #001080">innerRadius</span><span style="color: #000000"> + </span><span style="color: #001080">shapeData</span><span style="color: #000000">.</span><span style="color: #001080">lineSpacing</span><span style="color: #000000"> * </span><span style="color: #001080">angle</span><span style="color: #000000">) * </span><span style="color: #267F99">Math</span><span style="color: #000000">.</span><span style="color: #795E26">sin</span><span style="color: #000000">(</span><span style="color: #001080">angle</span><span style="color: #000000">);</span>
+
+<span style="color: #000000">    </span><span style="color: #001080">context</span><span style="color: #000000">.</span><span style="color: #795E26">lineTo</span><span style="color: #000000">(</span><span style="color: #001080">x</span><span style="color: #000000">, </span><span style="color: #001080">y</span><span style="color: #000000">);</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">});</span>
+</code></pre>
+						<p>If you prefer using classes you can, <a href="../interfaces/core_interfaces_ishapedrawer.ishapedrawer.html">IShapeDrawer</a> interface can be implemented in your code or at least a class with four method <a href="../interfaces/core_interfaces_ishapedrawer.ishapedrawer.html#draw">draw(context, particle, radius, opacity, delta)</a>, <a href="../interfaces/core_interfaces_ishapedrawer.ishapedrawer.html#init">init(container)</a>, <a href="../interfaces/core_interfaces_ishapedrawer.ishapedrawer.html#aftereffect">afterEffect(context, particle, radius, opacity, delta)</a>, <a href="../interfaces/core_interfaces_ishapedrawer.ishapedrawer.html#destroy">destroy(container)</a> in it. You can find a sample below.</p>
+						<pre><code class="language-javascript"><span style="color: #0000FF">class</span><span style="color: #000000"> </span><span style="color: #267F99">SpiralDrawer</span><span style="color: #000000"> {</span>
+<span style="color: #000000">  </span><span style="color: #795E26">draw</span><span style="color: #000000">(</span><span style="color: #001080">context</span><span style="color: #000000">, </span><span style="color: #001080">particle</span><span style="color: #000000">, </span><span style="color: #001080">radius</span><span style="color: #000000">, </span><span style="color: #001080">opacity</span><span style="color: #000000">, </span><span style="color: #001080">delta</span><span style="color: #000000">) {</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">shapeData</span><span style="color: #000000"> = </span><span style="color: #001080">particle</span><span style="color: #000000">.</span><span style="color: #001080">shapeData</span><span style="color: #000000">;</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">realWidth</span><span style="color: #000000"> = (</span><span style="color: #001080">radius</span><span style="color: #000000"> - </span><span style="color: #001080">shapeData</span><span style="color: #000000">.</span><span style="color: #001080">innerRadius</span><span style="color: #000000">) / </span><span style="color: #001080">shapeData</span><span style="color: #000000">.</span><span style="color: #001080">lineSpacing</span><span style="color: #000000">;</span>
+
+<span style="color: #000000">    </span><span style="color: #AF00DB">for</span><span style="color: #000000"> (</span><span style="color: #0000FF">let</span><span style="color: #000000"> </span><span style="color: #001080">i</span><span style="color: #000000"> = </span><span style="color: #098658">0</span><span style="color: #000000">; </span><span style="color: #001080">i</span><span style="color: #000000"> &lt; </span><span style="color: #001080">realWidth</span><span style="color: #000000"> * </span><span style="color: #098658">10</span><span style="color: #000000">; </span><span style="color: #001080">i</span><span style="color: #000000">++) {</span>
+<span style="color: #000000">      </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">angle</span><span style="color: #000000"> = </span><span style="color: #098658">0.1</span><span style="color: #000000"> * </span><span style="color: #001080">i</span><span style="color: #000000">;</span>
+<span style="color: #000000">      </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">x</span><span style="color: #000000"> =</span>
+<span style="color: #000000">        (</span><span style="color: #001080">shapeData</span><span style="color: #000000">.</span><span style="color: #001080">innerRadius</span><span style="color: #000000"> + </span><span style="color: #001080">shapeData</span><span style="color: #000000">.</span><span style="color: #001080">lineSpacing</span><span style="color: #000000"> * </span><span style="color: #001080">angle</span><span style="color: #000000">) *</span>
+<span style="color: #000000">        </span><span style="color: #267F99">Math</span><span style="color: #000000">.</span><span style="color: #795E26">cos</span><span style="color: #000000">(</span><span style="color: #001080">angle</span><span style="color: #000000">);</span>
+<span style="color: #000000">      </span><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">y</span><span style="color: #000000"> =</span>
+<span style="color: #000000">        (</span><span style="color: #001080">shapeData</span><span style="color: #000000">.</span><span style="color: #001080">innerRadius</span><span style="color: #000000"> + </span><span style="color: #001080">shapeData</span><span style="color: #000000">.</span><span style="color: #001080">lineSpacing</span><span style="color: #000000"> * </span><span style="color: #001080">angle</span><span style="color: #000000">) *</span>
+<span style="color: #000000">        </span><span style="color: #267F99">Math</span><span style="color: #000000">.</span><span style="color: #795E26">sin</span><span style="color: #000000">(</span><span style="color: #001080">angle</span><span style="color: #000000">);</span>
+
+<span style="color: #000000">      </span><span style="color: #001080">context</span><span style="color: #000000">.</span><span style="color: #795E26">lineTo</span><span style="color: #000000">(</span><span style="color: #001080">x</span><span style="color: #000000">, </span><span style="color: #001080">y</span><span style="color: #000000">);</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">}</span>
+
+<span style="color: #008000">// call this method before initializing tsParticles, this shape will be available in all of your tsParticles instances</span>
+<span style="color: #008000">// parameters: shape name, drawer class</span>
+<span style="color: #001080">tsParticles</span><span style="color: #000000">.</span><span style="color: #795E26">addShape</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;spiral&quot;</span><span style="color: #000000">, </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">SpiralDrawer</span><span style="color: #000000">());</span>
+</code></pre>
+						<a href="#bubble-sample-with-after-effect" id="bubble-sample-with-after-effect" style="color: inherit; text-decoration: none;">
+							<h4>Bubble Sample (with after effect)</h4>
+						</a>
+						<p><em>bubble.js</em> - The custom shape script</p>
+						<pre><code class="language-javascript"><span style="color: #001080">tsParticles</span><span style="color: #000000">.</span><span style="color: #795E26">addShape</span><span style="color: #000000">(</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&quot;bubble&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">function</span><span style="color: #000000"> (</span><span style="color: #001080">context</span><span style="color: #000000">, </span><span style="color: #001080">particle</span><span style="color: #000000">, </span><span style="color: #001080">radius</span><span style="color: #000000">) { </span><span style="color: #008000">// drawing function</span>
+<span style="color: #000000">        </span><span style="color: #001080">context</span><span style="color: #000000">.</span><span style="color: #795E26">arc</span><span style="color: #000000">(</span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #001080">radius</span><span style="color: #000000">, </span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #267F99">Math</span><span style="color: #000000">.PI * </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #0000FF">false</span><span style="color: #000000">);</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">undefined</span><span style="color: #000000">, </span><span style="color: #008000">// init function is not required</span>
+<span style="color: #000000">    </span><span style="color: #0000FF">function</span><span style="color: #000000"> (</span><span style="color: #001080">context</span><span style="color: #000000">, </span><span style="color: #001080">particle</span><span style="color: #000000">, </span><span style="color: #001080">radius</span><span style="color: #000000">) { </span><span style="color: #008000">// after effect function</span>
+<span style="color: #000000">        </span><span style="color: #001080">context</span><span style="color: #000000">.</span><span style="color: #795E26">save</span><span style="color: #000000">();</span>
+<span style="color: #000000">        </span><span style="color: #001080">context</span><span style="color: #000000">.</span><span style="color: #795E26">beginPath</span><span style="color: #000000">();</span>
+<span style="color: #000000">        </span><span style="color: #001080">context</span><span style="color: #000000">.</span><span style="color: #795E26">arc</span><span style="color: #000000">(</span><span style="color: #001080">radius</span><span style="color: #000000"> / </span><span style="color: #098658">3</span><span style="color: #000000">, -</span><span style="color: #001080">radius</span><span style="color: #000000"> / </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #001080">radius</span><span style="color: #000000"> / </span><span style="color: #098658">3</span><span style="color: #000000">, </span><span style="color: #098658">0</span><span style="color: #000000">, </span><span style="color: #267F99">Math</span><span style="color: #000000">.PI * </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #0000FF">false</span><span style="color: #000000">);</span>
+<span style="color: #000000">        </span><span style="color: #001080">context</span><span style="color: #000000">.</span><span style="color: #795E26">closePath</span><span style="color: #000000">();</span>
+<span style="color: #000000">        </span><span style="color: #001080">context</span><span style="color: #000000">.</span><span style="color: #001080">fillStyle</span><span style="color: #000000"> = </span><span style="color: #A31515">&quot;#fff9&quot;</span><span style="color: #000000">;</span>
+<span style="color: #000000">        </span><span style="color: #001080">context</span><span style="color: #000000">.</span><span style="color: #795E26">fill</span><span style="color: #000000">();</span>
+<span style="color: #000000">        </span><span style="color: #001080">context</span><span style="color: #000000">.</span><span style="color: #795E26">restore</span><span style="color: #000000">();</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">);</span>
+</code></pre>
+						<a href="#config" id="config" style="color: inherit; text-decoration: none;">
+							<h3>Config</h3>
+						</a>
+						<p><em>config.json</em> - The config section to add to your config or in your plugin readme to teach others on how to use it.</p>
+						<pre><code class="language-javascript"><span style="color: #000000">{</span>
+<span style="color: #000000">  </span><span style="color: #008000">// [... omitted for brevity]</span>
+<span style="color: #000000">  </span><span style="color: #A31515">&quot;particles&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">    </span><span style="color: #008000">// [... omitted for brevity]</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&quot;shape&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">      </span><span style="color: #A31515">&quot;type&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;spiral&quot;</span><span style="color: #000000">, </span><span style="color: #008000">// this must match the name above, the type works as always, you can use an array with your custom shape inside</span>
+<span style="color: #000000">      </span><span style="color: #A31515">&quot;custom&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">        </span><span style="color: #008000">// this must match the name above, these are the values set in particle.shapeData (the first line of the method above)</span>
+<span style="color: #000000">        </span><span style="color: #008000">// you can use array as value here too, the values will be random picked, like in standard shapes</span>
+<span style="color: #000000">        </span><span style="color: #A31515">&quot;spiral&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">          </span><span style="color: #A31515">&quot;innerRadius&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000">          </span><span style="color: #A31515">&quot;lineSpacing&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">,</span>
+<span style="color: #000000">          </span><span style="color: #A31515">&quot;close&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #0000FF">false</span><span style="color: #000000">, </span><span style="color: #008000">// this value is used by tsParticles to close the path, if you don&#039;t want to close it set this value to false</span>
+<span style="color: #000000">          </span><span style="color: #A31515">&quot;fill&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #0000FF">false</span><span style="color: #000000"> </span><span style="color: #008000">// this value is used by tsParticles to fill the shape with the particles color, if you want only the stroke set this value to false</span>
+<span style="color: #000000">        }</span>
+<span style="color: #000000">      }</span>
+<span style="color: #000000">      </span><span style="color: #008000">// [... omitted for brevity]</span>
+<span style="color: #000000">    }</span>
+<span style="color: #000000">    </span><span style="color: #008000">// [... omitted for brevity]</span>
+<span style="color: #000000">  }</span>
+<span style="color: #000000">  </span><span style="color: #008000">// [... omitted for brevity]</span>
+<span style="color: #000000">}</span>
+</code></pre>
+						<a href="#creating-a-custom-preset" id="creating-a-custom-preset" style="color: inherit; text-decoration: none;">
+							<h2>Creating a custom preset</h2>
+						</a>
+						<p>You can now create a script with your own preset to use in your website or for distributing it to others. All you have to do is give it a name and set all the options you need it to load correctly. Remember to not import all config, properties not needed can be omitted.</p>
+						<p>Publish your preset with <code>tsparticles-preset</code> tag on <code>NPM</code> so everyone can find it.</p>
+						<p>You&#39;ll find a sample below.</p>
+						<a href="#fire-preset-sample" id="fire-preset-sample" style="color: inherit; text-decoration: none;">
+							<h3>Fire preset sample</h3>
+						</a>
+						<p><em>fire.preset.js</em> - The custom preset script, you can distribute it or reuse in all your websites.</p>
+						<pre><code class="language-javascript"><span style="color: #008000">// call this method before initializing tsParticles, this preset will be available in all of your tsParticles instances</span>
+<span style="color: #008000">// parameters: preset name, preset partial options</span>
+<span style="color: #001080">tsParticles</span><span style="color: #000000">.</span><span style="color: #795E26">addPreset</span><span style="color: #000000">(</span><span style="color: #A31515">&quot;fire&quot;</span><span style="color: #000000">, {</span>
+<span style="color: #000000">  </span><span style="color: #001080">fpsLimit:</span><span style="color: #000000"> </span><span style="color: #098658">40</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">particles:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #001080">number:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">      </span><span style="color: #001080">value:</span><span style="color: #000000"> </span><span style="color: #098658">80</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">density:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">        </span><span style="color: #001080">enable:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">value_area:</span><span style="color: #000000"> </span><span style="color: #098658">800</span><span style="color: #000000">,</span>
+<span style="color: #000000">      },</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">    </span><span style="color: #001080">color:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">      </span><span style="color: #001080">value:</span><span style="color: #000000"> [</span><span style="color: #A31515">&quot;#fdcf58&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;#757676&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;#f27d0c&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;#800909&quot;</span><span style="color: #000000">, </span><span style="color: #A31515">&quot;#f07f13&quot;</span><span style="color: #000000">],</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">    </span><span style="color: #001080">opacity:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">      </span><span style="color: #001080">value:</span><span style="color: #000000"> </span><span style="color: #098658">0.5</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">random:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">    </span><span style="color: #001080">size:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">      </span><span style="color: #001080">value:</span><span style="color: #000000"> </span><span style="color: #098658">3</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">random:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">    </span><span style="color: #001080">move:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">      </span><span style="color: #001080">enable:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">speed:</span><span style="color: #000000"> </span><span style="color: #098658">6</span><span style="color: #000000">,</span>
+<span style="color: #000000">      </span><span style="color: #001080">random:</span><span style="color: #000000"> </span><span style="color: #0000FF">false</span><span style="color: #000000">,</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">  </span><span style="color: #001080">interactivity:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #001080">events:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">      </span><span style="color: #001080">onclick:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">        </span><span style="color: #001080">enable:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
+<span style="color: #000000">        </span><span style="color: #001080">mode:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;push&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">      },</span>
+<span style="color: #000000">      </span><span style="color: #001080">resize:</span><span style="color: #000000"> </span><span style="color: #0000FF">true</span><span style="color: #000000">,</span>
+<span style="color: #000000">    },</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">  </span><span style="color: #001080">background:</span><span style="color: #000000"> {</span>
+<span style="color: #000000">    </span><span style="color: #001080">image:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;radial-gradient(#4a0000, #000)&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  },</span>
+<span style="color: #000000">});</span>
+</code></pre>
+						<p><em>config.json</em> - The config section to add to your config or in your plugin readme to teach others on how to use it.</p>
+						<pre><code class="language-javascript"><span style="color: #000000">{</span>
+<span style="color: #000000">  </span><span style="color: #A31515">&quot;preset&quot;</span><span style="color: #000000">: </span><span style="color: #A31515">&quot;fire&quot;</span><span style="color: #000000"> </span><span style="color: #008000">// this should match the name above, it can be used in array values too, it will be loaded in order like everyone else</span>
+<span style="color: #000000">}</span>
+</code></pre>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Interfaces Interfaces</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-interface tsd-parent-kind-module"><a href="../interfaces/core_interfaces_iplugin.iplugin.html" class="tsd-kind-icon">IPlugin</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Modules</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="core_interfaces_iplugin.html">Core/<wbr>Interfaces/IPlugin</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/core_interfaces_iplugin.iplugin.html" class="tsd-kind-icon">IPlugin</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-161253125-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>

@@ -1,0 +1,691 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>IOptions | tsParticles - v1.28.2</title>
+	<meta name="description" content="Documentation for tsParticles - v1.28.2">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+	<script async src="../assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">tsParticles - v1.28.2</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules.html">tsParticles - v1.28.2</a>
+				</li>
+				<li>
+					<a href="../modules/options_interfaces_ioptions.html">Options/Interfaces/IOptions</a>
+				</li>
+				<li>
+					<a href="options_interfaces_ioptions.ioptions.html">IOptions</a>
+				</li>
+			</ul>
+			<h1>Interface IOptions</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The Options interface, defines all the options that can be used by <code>tsParticles</code></p>
+						<a href="#options" id="options" style="color: inherit; text-decoration: none;">
+							<h1><strong><em>Options</em></strong></h1>
+						</a>
+						<table>
+							<thead>
+								<tr>
+									<th>property</th>
+									<th>option type</th>
+									<th>example</th>
+									<th>notes</th>
+								</tr>
+							</thead>
+							<tbody><tr>
+									<td><code>autoPlay</code></td>
+									<td><code>boolean</code></td>
+									<td><code>true</code> / <code>false</code></td>
+									<td></td>
+								</tr>
+								<tr>
+									<td><code>background</code></td>
+									<td><code>object</code></td>
+									<td></td>
+									<td>See Background options <a href="options_interfaces_background_ibackground.ibackground.html">here</a></td>
+								</tr>
+								<tr>
+									<td><code>backgroundMask</code></td>
+									<td><code>object</code></td>
+									<td></td>
+									<td>See Background Mask options <a href="options_interfaces_backgroundmask_ibackgroundmask.ibackgroundmask.html">here</a></td>
+								</tr>
+								<tr>
+									<td><code>detectRetina</code></td>
+									<td><code>boolean</code></td>
+									<td><code>true</code> / <code>false</code></td>
+									<td>Replaces the old <code>retina_detect</code> property</td>
+								</tr>
+								<tr>
+									<td><code>fpsLimit</code></td>
+									<td><code>number</code></td>
+									<td><code>30</code></td>
+									<td><em>Defaults to <code>30</code></em>, replaces the old <code>fps_limit</code> property</td>
+								</tr>
+								<tr>
+									<td><code>fullScreen</code></td>
+									<td><code>object</code></td>
+									<td></td>
+									<td>See Full Screen options <a href="options_interfaces_fullscreen_ifullscreen.ifullscreen.html">here</a></td>
+								</tr>
+								<tr>
+									<td><code>infection</code></td>
+									<td><code>object</code></td>
+									<td></td>
+									<td>See Infection options <a href="options_interfaces_infection_iinfection.iinfection.html">here</a></td>
+								</tr>
+								<tr>
+									<td><code>interactivity</code></td>
+									<td><code>object</code></td>
+									<td></td>
+									<td>See Interactivity options <a href="options_interfaces_interactivity_iinteractivity.iinteractivity.html">here</a></td>
+								</tr>
+								<tr>
+									<td><code>manualParticles</code></td>
+									<td><code>array</code></td>
+									<td></td>
+									<td>An array of Manual Particles object. See Manual Particles documentation <a href="options_interfaces_imanualparticle.imanualparticle.html">here</a></td>
+								</tr>
+								<tr>
+									<td><code>motion</code></td>
+									<td><code>object</code></td>
+									<td></td>
+									<td>See Motion options <a href="options_interfaces_motion_imotion.imotion.html">here</a></td>
+								</tr>
+								<tr>
+									<td><code>particles</code></td>
+									<td><code>object</code></td>
+									<td></td>
+									<td>See Particles options <a href="options_interfaces_particles_iparticles.iparticles.html">here</a></td>
+								</tr>
+								<tr>
+									<td><code>pauseOnBlur</code></td>
+									<td><code>boolean</code></td>
+									<td><code>true</code> / <code>false</code></td>
+									<td>Pauses the animations when the page isn&#39;t on foreground</td>
+								</tr>
+								<tr>
+									<td><code>pauseOnOutsideViewport</code></td>
+									<td><code>boolean</code></td>
+									<td><code>true</code> / <code>false</code></td>
+									<td>Pauses the animations when the element is out of the viewport</td>
+								</tr>
+								<tr>
+									<td><code>preset</code></td>
+									<td><code>string</code> / <code>array</code></td>
+									<td><code>&quot;basic&quot;</code><br /> <code>[ &quot;basic&quot;, &quot;60fps&quot; ]</code></td>
+									<td>You can use this property to load one or more presets for focusing on important properties and not all config. You can find presets on <code>npm</code> <a href="https://www.npmjs.com/search?q=tsparticles-preset">here</a></td>
+								</tr>
+								<tr>
+									<td><code>themes</code></td>
+									<td><code>array</code></td>
+									<td></td>
+									<td>It&#39;s an array of Theme object, you can see the structure <a href="options_interfaces_theme_itheme.itheme.html">here</a></td>
+								</tr>
+						</tbody></table>
+						<a href="#plugins" id="plugins" style="color: inherit; text-decoration: none;">
+							<h2>Plugins</h2>
+						</a>
+						<p>These options are not used by slim bundle</p>
+						<table>
+							<thead>
+								<tr>
+									<th>property</th>
+									<th>option type</th>
+									<th>example</th>
+									<th>notes</th>
+								</tr>
+							</thead>
+							<tbody><tr>
+									<td><code>absorbers</code></td>
+									<td><code>object</code> / <code>array</code></td>
+									<td></td>
+									<td>See Absorbers options <a href="plugins_absorbers_options_interfaces_iabsorber.iabsorber.html">here</a></td>
+								</tr>
+								<tr>
+									<td><code>emitters</code></td>
+									<td><code>object</code> / <code>array</code></td>
+									<td></td>
+									<td>See Emitter options <a href="plugins_emitters_options_interfaces_iemitter.iemitter.html">here</a></td>
+								</tr>
+								<tr>
+									<td><code>polygonMask</code></td>
+									<td><code>object</code></td>
+									<td></td>
+									<td>See Particles options <a href="plugins_polygonmask_options_interfaces_ipolygonmask.ipolygonmask.html">here</a></td>
+								</tr>
+						</tbody></table>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">IOptions</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implemented by</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../classes/options_classes_options.options.html" class="tsd-signature-type" data-tsd-kind="Class">Options</a></li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-kind-interface tsd-parent-kind-module">
+				<h3 class="tsd-before-signature">Indexable</h3>
+				<div class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">[</span>name: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">unknown</span></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>More custom options for external plugins or customizations</p>
+					</div>
+				</div>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#autoplay" class="tsd-kind-icon">auto<wbr>Play</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#background" class="tsd-kind-icon">background</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#backgroundmask" class="tsd-kind-icon">background<wbr>Mask</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#backgroundmode" class="tsd-kind-icon">background<wbr>Mode</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#detectretina" class="tsd-kind-icon">detect<wbr>Retina</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#fpslimit" class="tsd-kind-icon">fps<wbr>Limit</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#fps_limit" class="tsd-kind-icon">fps_<wbr>limit</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#fullscreen" class="tsd-kind-icon">full<wbr>Screen</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#infection" class="tsd-kind-icon">infection</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#interactivity" class="tsd-kind-icon">interactivity</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#manualparticles" class="tsd-kind-icon">manual<wbr>Particles</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#motion" class="tsd-kind-icon">motion</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#particles" class="tsd-kind-icon">particles</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#pauseonblur" class="tsd-kind-icon">pause<wbr>OnBlur</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#pauseonoutsideviewport" class="tsd-kind-icon">pause<wbr>OnOutside<wbr>Viewport</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#preset" class="tsd-kind-icon">preset</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#responsive" class="tsd-kind-icon">responsive</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#retina_detect" class="tsd-kind-icon">retina_<wbr>detect</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="options_interfaces_ioptions.ioptions.html#themes" class="tsd-kind-icon">themes</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="autoplay" class="tsd-anchor"></a>
+					<h3>auto<wbr>Play</h3>
+					<div class="tsd-signature tsd-kind-icon">auto<wbr>Play<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L22">Options/Interfaces/IOptions.ts:22</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Sets if the animations should start automatically or manually</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="background" class="tsd-anchor"></a>
+					<h3>background</h3>
+					<div class="tsd-signature tsd-kind-icon">background<span class="tsd-signature-symbol">:</span> <a href="options_interfaces_background_ibackground.ibackground.html" class="tsd-signature-type" data-tsd-kind="Interface">IBackground</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L27">Options/Interfaces/IOptions.ts:27</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Background options, these background options will be used to the canvas element, they are all CSS properties</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="backgroundmask" class="tsd-anchor"></a>
+					<h3>background<wbr>Mask</h3>
+					<div class="tsd-signature tsd-kind-icon">background<wbr>Mask<span class="tsd-signature-symbol">:</span> <a href="options_interfaces_backgroundmask_ibackgroundmask.ibackgroundmask.html" class="tsd-signature-type" data-tsd-kind="Interface">IBackgroundMask</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L32">Options/Interfaces/IOptions.ts:32</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Background Mask options, what&#39;s behind the canvas will become hidden and particles will uncover it</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="backgroundmode" class="tsd-anchor"></a>
+					<h3>background<wbr>Mode</h3>
+					<div class="tsd-signature tsd-kind-icon">background<wbr>Mode<span class="tsd-signature-symbol">:</span> <a href="options_interfaces_fullscreen_ifullscreen.ifullscreen.html" class="tsd-signature-type" data-tsd-kind="Interface">IFullScreen</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L38">Options/Interfaces/IOptions.ts:38</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Sets the animated background mode for particles canvas bringing it to the back</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>use the new fullScreen instead</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="detectretina" class="tsd-anchor"></a>
+					<h3>detect<wbr>Retina</h3>
+					<div class="tsd-signature tsd-kind-icon">detect<wbr>Retina<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L43">Options/Interfaces/IOptions.ts:43</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Enables the retina detection, if disabled the ratio used by canvas will be always 1 and not the device setting.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="fpslimit" class="tsd-anchor"></a>
+					<h3>fps<wbr>Limit</h3>
+					<div class="tsd-signature tsd-kind-icon">fps<wbr>Limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L54">Options/Interfaces/IOptions.ts:54</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The FPS (Frame Per Second) limit applied to all particles animations.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="fps_limit" class="tsd-anchor"></a>
+					<h3>fps_<wbr>limit</h3>
+					<div class="tsd-signature tsd-kind-icon">fps_<wbr>limit<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L49">Options/Interfaces/IOptions.ts:49</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The Frame Per Second limit applied to all particles animations.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>use the new fpsLimit instead</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="fullscreen" class="tsd-anchor"></a>
+					<h3>full<wbr>Screen</h3>
+					<div class="tsd-signature tsd-kind-icon">full<wbr>Screen<span class="tsd-signature-symbol">:</span> <a href="options_interfaces_fullscreen_ifullscreen.ifullscreen.html" class="tsd-signature-type" data-tsd-kind="Interface">IFullScreen</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L59">Options/Interfaces/IOptions.ts:59</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Sets the animated background mode for particles canvas bringing it to the back</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="infection" class="tsd-anchor"></a>
+					<h3>infection</h3>
+					<div class="tsd-signature tsd-kind-icon">infection<span class="tsd-signature-symbol">:</span> <a href="options_interfaces_infection_iinfection.iinfection.html" class="tsd-signature-type" data-tsd-kind="Interface">IInfection</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L64">Options/Interfaces/IOptions.ts:64</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The infection options</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="interactivity" class="tsd-anchor"></a>
+					<h3>interactivity</h3>
+					<div class="tsd-signature tsd-kind-icon">interactivity<span class="tsd-signature-symbol">:</span> <a href="options_interfaces_interactivity_iinteractivity.iinteractivity.html" class="tsd-signature-type" data-tsd-kind="Interface">IInteractivity</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L69">Options/Interfaces/IOptions.ts:69</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The particles interaction options</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="manualparticles" class="tsd-anchor"></a>
+					<h3>manual<wbr>Particles</h3>
+					<div class="tsd-signature tsd-kind-icon">manual<wbr>Particles<span class="tsd-signature-symbol">:</span> <a href="options_interfaces_imanualparticle.imanualparticle.html" class="tsd-signature-type" data-tsd-kind="Interface">IManualParticle</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L74">Options/Interfaces/IOptions.ts:74</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Particles inserted at load time with a specific position</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="motion" class="tsd-anchor"></a>
+					<h3>motion</h3>
+					<div class="tsd-signature tsd-kind-icon">motion<span class="tsd-signature-symbol">:</span> <a href="options_interfaces_motion_imotion.imotion.html" class="tsd-signature-type" data-tsd-kind="Interface">IMotion</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L79">Options/Interfaces/IOptions.ts:79</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Handles user&#39;s preferences about motion</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="particles" class="tsd-anchor"></a>
+					<h3>particles</h3>
+					<div class="tsd-signature tsd-kind-icon">particles<span class="tsd-signature-symbol">:</span> <a href="options_interfaces_particles_iparticles.iparticles.html" class="tsd-signature-type" data-tsd-kind="Interface">IParticles</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L84">Options/Interfaces/IOptions.ts:84</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The particles options</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="pauseonblur" class="tsd-anchor"></a>
+					<h3>pause<wbr>OnBlur</h3>
+					<div class="tsd-signature tsd-kind-icon">pause<wbr>OnBlur<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L89">Options/Interfaces/IOptions.ts:89</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Enables or disabled the animation on window blur</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="pauseonoutsideviewport" class="tsd-anchor"></a>
+					<h3>pause<wbr>OnOutside<wbr>Viewport</h3>
+					<div class="tsd-signature tsd-kind-icon">pause<wbr>OnOutside<wbr>Viewport<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L94">Options/Interfaces/IOptions.ts:94</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Enable or disabled the animation if the element is outside the viewport</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="preset" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> preset</h3>
+					<div class="tsd-signature tsd-kind-icon">preset<span class="tsd-signature-symbol">:</span> <a href="../modules/types_singleormultiple.html#singleormultiple" class="tsd-signature-type" data-tsd-kind="Type alias">SingleOrMultiple</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L99">Options/Interfaces/IOptions.ts:99</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This property will be used to add specified presets to the options</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="responsive" class="tsd-anchor"></a>
+					<h3>responsive</h3>
+					<div class="tsd-signature tsd-kind-icon">responsive<span class="tsd-signature-symbol">:</span> <a href="options_interfaces_iresponsive.iresponsive.html" class="tsd-signature-type" data-tsd-kind="Interface">IResponsive</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L104">Options/Interfaces/IOptions.ts:104</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>This sets custom options based on canvas size</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="retina_detect" class="tsd-anchor"></a>
+					<h3>retina_<wbr>detect</h3>
+					<div class="tsd-signature tsd-kind-icon">retina_<wbr>detect<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L110">Options/Interfaces/IOptions.ts:110</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Enables the retina detection, if disabled the ratio used by canvas will be always 1 and not the device setting.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt>deprecated</dt>
+							<dd><p>use the new detectRetina instead</p>
+							</dd>
+						</dl>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="themes" class="tsd-anchor"></a>
+					<h3>themes</h3>
+					<div class="tsd-signature tsd-kind-icon">themes<span class="tsd-signature-symbol">:</span> <a href="options_interfaces_theme_itheme.itheme.html" class="tsd-signature-type" data-tsd-kind="Interface">ITheme</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/matteobruni/tsparticles/blob/7dbd20ab3/core/main/src/Options/Interfaces/IOptions.ts#L115">Options/Interfaces/IOptions.ts:115</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>User-defined themes that can be retrieved by the particles <a href="../classes/core_container.container.html">Container</a></p>
+						</div>
+					</div>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="../modules.html">Modules</a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/options_interfaces_ioptions.html">Options/<wbr>Interfaces/IOptions</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
+						<a href="options_interfaces_ioptions.ioptions.html" class="tsd-kind-icon">IOptions</a>
+						<ul>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#autoplay" class="tsd-kind-icon">auto<wbr>Play</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#background" class="tsd-kind-icon">background</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#backgroundmask" class="tsd-kind-icon">background<wbr>Mask</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#backgroundmode" class="tsd-kind-icon">background<wbr>Mode</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#detectretina" class="tsd-kind-icon">detect<wbr>Retina</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#fpslimit" class="tsd-kind-icon">fps<wbr>Limit</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#fps_limit" class="tsd-kind-icon">fps_<wbr>limit</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#fullscreen" class="tsd-kind-icon">full<wbr>Screen</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#infection" class="tsd-kind-icon">infection</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#interactivity" class="tsd-kind-icon">interactivity</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#manualparticles" class="tsd-kind-icon">manual<wbr>Particles</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#motion" class="tsd-kind-icon">motion</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#particles" class="tsd-kind-icon">particles</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#pauseonblur" class="tsd-kind-icon">pause<wbr>OnBlur</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#pauseonoutsideviewport" class="tsd-kind-icon">pause<wbr>OnOutside<wbr>Viewport</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#preset" class="tsd-kind-icon">preset</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#responsive" class="tsd-kind-icon">responsive</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#retina_detect" class="tsd-kind-icon">retina_<wbr>detect</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="options_interfaces_ioptions.ioptions.html#themes" class="tsd-kind-icon">themes</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				<li class="tsd-kind-type-alias tsd-has-type-parameter"><span class="tsd-kind-icon">Type alias with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-161253125-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
